@@ -22,7 +22,7 @@ def save_uploaded_file(uploaded_file):
     with open(file_path, "wb") as f:
         f.write(uploaded_file.getbuffer())
     print(file_path)
-    return file_path
+    # return file_path
 
 
 def main() -> None:
@@ -36,7 +36,7 @@ def main() -> None:
 
     if uploaded_file is not None:
         file_path_for_the_apploaded_file = save_uploaded_file(uploaded_file)
-    print(f"the new file path created: {file_path_for_the_apploaded_file}")
+    # print(f"the new file path created: {file_path_for_the_apploaded_file}")
 
  
     question = st.text_input("Ask a question", placeholder="e.g., Summarize the document")
