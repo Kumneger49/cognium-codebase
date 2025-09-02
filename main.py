@@ -19,7 +19,7 @@ async def main(query, file_path="data/TSLA-Q3-2023-Update-3.pdf"):
     # Create RAGAnything configuration
     config = RAGAnythingConfig(
         working_dir="./rag_storage",
-        parser="mineru",  # Parser selection: mineru or docling
+        parser="docling",  # Parser selection: mineru or docling
         parse_method="auto",  # Parse method: auto, ocr, or txt
         enable_image_processing=True,
         enable_table_processing=True,

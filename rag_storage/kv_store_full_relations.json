@@ -150,5 +150,205 @@
     "create_time": 1756806539,
     "update_time": 1756806539,
     "_id": "doc-926ce99ed046a0a4369fdb5b7ac29763"
+  },
+  "doc-8e61bd935e996d3f79de987cbd13e4a4": {
+    "relation_pairs": [
+      [
+        "Securities and Exchange Commission",
+        "Tesla"
+      ],
+      [
+        "Current Installed Annual Vehicle Capacity",
+        "Giga Shanghai"
+      ],
+      [
+        "Services and Other Business",
+        "Supercharging"
+      ],
+      [
+        "Battery Cells",
+        "Tesla"
+      ],
+      [
+        "Auto Industry",
+        "Tesla"
+      ],
+      [
+        "Giga Shanghai",
+        "Q3 2023 Update"
+      ],
+      [
+        "Nevada",
+        "Tesla"
+      ],
+      [
+        "Q3-2023",
+        "Webcast"
+      ],
+      [
+        "Model X",
+        "Tesla"
+      ],
+      [
+        "Non-GAAP Net Income",
+        "Q3 2023 Update"
+      ],
+      [
+        "Supercharging Network",
+        "Tesla"
+      ],
+      [
+        "GM",
+        "Tesla"
+      ],
+      [
+        "Cybertruck",
+        "Tesla"
+      ],
+      [
+        "Solar Products",
+        "Tesla"
+      ],
+      [
+        "Operating Margin",
+        "Q3 2023 Update"
+      ],
+      [
+        "FSD Capability Features",
+        "Tesla Vehicles"
+      ],
+      [
+        "BMW",
+        "Tesla"
+      ],
+      [
+        "Nissan",
+        "Tesla"
+      ],
+      [
+        "Giga Shanghai",
+        "Tesla Vehicles"
+      ],
+      [
+        "Energy Generation and Storage Business",
+        "Free Cash Flow"
+      ],
+      [
+        "Cybertruck",
+        "FSD Capability Features"
+      ],
+      [
+        "Stellantis",
+        "Tesla"
+      ],
+      [
+        "Cybertruck",
+        "Gigafactory Texas"
+      ],
+      [
+        "Model 3",
+        "Tesla"
+      ],
+      [
+        "Giga Shanghai",
+        "Tesla"
+      ],
+      [
+        "Mercedes-Benz",
+        "Tesla"
+      ],
+      [
+        "Risk Factors",
+        "Tesla"
+      ],
+      [
+        "Hyundai",
+        "Tesla"
+      ],
+      [
+        "Ford",
+        "Tesla"
+      ],
+      [
+        "Berlin-Brandenburg",
+        "Tesla"
+      ],
+      [
+        "Model Y",
+        "Tesla Vehicles"
+      ],
+      [
+        "Tesla",
+        "Webcast"
+      ],
+      [
+        "Tesla",
+        "Toyota"
+      ],
+      [
+        "Gigafactory Texas",
+        "Texas"
+      ],
+      [
+        "Full Self-Driving",
+        "Tesla"
+      ],
+      [
+        "Tesla",
+        "VW"
+      ],
+      [
+        "Autopilot",
+        "Tesla"
+      ],
+      [
+        "Model Y",
+        "Tesla"
+      ],
+      [
+        "California",
+        "Tesla"
+      ],
+      [
+        "Gigafactory Texas",
+        "Tesla"
+      ],
+      [
+        "Energy Storage Deployments",
+        "Megafactory in Lathrop, CA"
+      ],
+      [
+        "Model S",
+        "Tesla"
+      ],
+      [
+        "Dojo Training Computers",
+        "Tesla"
+      ],
+      [
+        "GAAP Operating Income",
+        "Q3 2023 Update"
+      ],
+      [
+        "Cost of Goods Sold per Vehicle",
+        "Cybertruck"
+      ],
+      [
+        "Energy Storage Products",
+        "Tesla"
+      ],
+      [
+        "Global Pandemic",
+        "Tesla"
+      ],
+      [
+        "Honda",
+        "Tesla"
+      ]
+    ],
+    "count": 48,
+    "create_time": 1756843938,
+    "update_time": 1756843938,
+    "_id": "doc-8e61bd935e996d3f79de987cbd13e4a4"
   }
 }

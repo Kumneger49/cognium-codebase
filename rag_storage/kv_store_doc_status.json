@@ -42,5 +42,42 @@
       "processing_end_time": 1756806539
     },
     "multimodal_processed": true
+  },
+  "doc-8e61bd935e996d3f79de987cbd13e4a4": {
+    "status": "processed",
+    "chunks_count": 20,
+    "chunks_list": [
+      "chunk-fe28a3d3d73fa648dad3376862d8c782",
+      "chunk-e9d8af90113befb01a3be8fcd5658642",
+      "chunk-ca50c6a417fdd4078d37da93893e1c71",
+      "chunk-7f868014b09c5a727d3947d3c91ad5f2",
+      "chunk-6d01e96a72d9644f17935c8da11af82f",
+      "chunk-f8411560be60738a710b9e2ccae7722d",
+      "chunk-417beff3638dd572c38d7297bc9e4c4c",
+      "chunk-ee9776a66d4ba2132931652063417356",
+      "chunk-9c68a52f12615a34cc4a9493bf15d402",
+      "chunk-e02eb455f5779557895a8db752aff486",
+      "chunk-839097529b917f651ace7fe054537160",
+      "chunk-9f979607e1424757e269d665eb90411c",
+      "chunk-791afabc81e0d5478b1677f4b71dc119",
+      "chunk-e1ac0f451cc6f640105cf4402de4c7f6",
+      "chunk-70006c7feeba40f2a056e3d2c8f1720c",
+      "chunk-ce04d830dc29424f0e48ad87cb1b4b01",
+      "chunk-e117505c42942390a08cb9930aa0914d",
+      "chunk-6656d9f0ad3dd14bfb4dc68b6875fa69",
+      "chunk-fd22b3a31e1e4f31540d3aaf0aa82896",
+      "chunk-6a09da2f9f1765c9da1dd16eb8397d33"
+    ],
+    "content_summary": "1\n\nQ3 2023 Update\n\nH I G H L I G H T S\n\nProfitability\n\n7.6% operating margin in Q3\n\n$1.8B GAAP operating income in Q3\n\n$1.9B GAAP net income in Q3\n\n$2.3B non-GAAP net income 1  in Q3\n\nOperating cash flow of $3.3B in Q3\n\nFree cash flow 2 of $0.8B in Q...",
+    "content_length": 19417,
+    "created_at": "2025-09-02T20:11:03.530349+00:00",
+    "updated_at": "2025-09-03T00:26:34+00:00",
+    "file_path": "TSLA-Q3-2023-Update-3.pdf",
+    "track_id": "insert_20250903_001103_af9a8f01",
+    "metadata": {
+      "processing_start_time": 1756843863,
+      "processing_end_time": 1756843938
+    },
+    "multimodal_processed": true
   }
 }
