@@ -2,7 +2,8 @@ streamlit>=1.37.0
 python-dotenv>=1.0.1
 raganything==1.2.7
 ollama>=0.5.3
-
+mineru
 # LightRAG deps (typically installed with raganything, pinned here for safety)
 openai>=1.37.0
+pyvis>=0.3.2
 
