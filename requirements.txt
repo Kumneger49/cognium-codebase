@@ -2,8 +2,8 @@ streamlit>=1.37.0
 python-dotenv>=1.0.1
 raganything==1.2.7
 ollama>=0.5.3
-mineru
-# LightRAG deps (typically installed with raganything, pinned here for safety)
+mineru[all]   # include all extras so PDF parsing works
 openai>=1.37.0
 pyvis>=0.3.2
-
+pypdf>=3.15.0   # sometimes needed for PDF processing
+pdfminer.six>=20221105  # MinerU relies on this

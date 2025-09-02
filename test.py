@@ -7,12 +7,29 @@ import asyncio
 # print("This is the testing file calling the main file")
 # print(asyncio.run(main(query="what is the summary of the document I provided?", file_path="data/RockefellerData.pdf")))
 user_query = "Could you summarize what is in page 15?"
-question = f"""You are acting as a research assistant for an investment company. You will receive a document (e.g., financial report, news article, company profile, or market analysis). 
-        Your task is to carefully read and analyze the document from the perspective of an investor. Based on the document, answer the following user query:
-        User Query: {user_query}
-        When responding, highlight information that is most relevant to investment decisions, such as: financial performance, growth potential, competitive positioning, risks, management quality, and market opportunities. 
-        If the document does not contain enough information to answer fully, acknowledge the gaps clearly. Always respond in a structured, concise, and professional manner"""
+question = f"""
+You are acting as a research assistant for an investment company. 
+You will receive a document (financial report, news article, company profile, or market analysis). 
+
+Your task: Carefully analyze the document and directly answer the user query. 
+- Use only the content relevant to the query. 
+- If the query asks broadly, highlight information investors care about (e.g., financial performance, growth potential, risks, competitive positioning, management quality, market opportunities). 
+- If the query is specific, focus only on that aspect. Do not introduce unrelated metrics. 
+- If the document lacks enough detail, acknowledge the gaps clearly. 
+
+User Query: {user_query}
+"""
+
 print(asyncio.run(main(question)))
 # print(asyncio.run(main(query="who is rockefeller writing these letters for?")))
+
+ 
+
+
+
+
+
+
+
 
 
