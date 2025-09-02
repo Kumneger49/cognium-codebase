@@ -7,3 +7,4 @@ openai>=1.37.0
 pyvis>=0.3.2
 pypdf>=3.15.0
 pdfminer.six>=20221105
+docling
