@@ -4,6 +4,5 @@ raganything==1.2.7
 ollama>=0.5.3
 
 # LightRAG deps (typically installed with raganything, pinned here for safety)
-lightrag>=0.1.0
 openai>=1.37.0
 

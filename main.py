@@ -1,19 +1,20 @@
-
-
-
 import asyncio
+from lightrag import LightRAG
 from raganything import RAGAnything, RAGAnythingConfig
 from lightrag.llm.openai import openai_complete_if_cache, openai_embed
 from lightrag.llm.ollama import ollama_model_complete, _ollama_model_if_cache, ollama_embed
 from lightrag.utils import EmbeddingFunc
+from lightrag.kg.shared_storage import initialize_pipeline_status
 
 from dotenv import load_dotenv
 load_dotenv()
 
-async def main(query:str, file_path:str):
-    # Set up API configuration
-    api_key = ""
-    # base_url = "your-base-url"  # Optional
+import json 
+
+import os
+
+async def main(query, file_path="data/TSLA-Q3-2023-Update-3.pdf"):
+ 
 
     # Create RAGAnything configuration
     config = RAGAnythingConfig(
@@ -23,6 +24,7 @@ async def main(query:str, file_path:str):
         enable_image_processing=True,
         enable_table_processing=True,
         enable_equation_processing=True,
+        display_content_stats=True,
     )
 
     # Define LLM model function
@@ -32,7 +34,6 @@ async def main(query:str, file_path:str):
             prompt,
             system_prompt=system_prompt,
             history_messages=history_messages,
-            api_key=api_key,
             # base_url=base_url,
             **kwargs,
         )
@@ -62,7 +63,6 @@ async def main(query:str, file_path:str):
                 system_prompt=None,
                 history_messages=[],
                 messages=messages,
-                api_key=api_key,
                 # base_url=base_url,
                 **kwargs,
             )
@@ -92,7 +92,7 @@ async def main(query:str, file_path:str):
                     if image_data
                     else {"role": "user", "content": prompt},
                 ],
-                api_key=api_key,
+               
                 # base_url=base_url,
                 **kwargs,
             )
@@ -108,7 +108,7 @@ async def main(query:str, file_path:str):
         func=lambda texts: openai_embed(
             texts,
             model="text-embedding-3-large",
-            api_key=api_key,
+            
             # base_url=base_url,
         ),
     )
@@ -133,27 +133,50 @@ async def main(query:str, file_path:str):
         embedding_func=embedding_func,
     )
 
-    # Process a document
+    # print(json.dumps(rag.__dict__, indent=4, default=str))
+
+
+    # load the files inside the data directory in a list
+    # files = [
+    #     os.path.join("./data", f)
+    #     for f in os.listdir("./data")
+    #     if os.path.isfile(os.path.join("./data", f))
+    # ]
+
+
     await rag.process_document_complete(
-        # file_path="./data/RockefellerData.pdf",
-        file_path=f"./{file_path}",
+        file_path=file_path,
         output_dir="./output",
         parse_method="txt"
     )
 
+
+    # for file_path in files:
+    #     print(f"Processing {file_path} ...")
+    #     await rag.process_document_complete(
+    #         file_path=file_path,
+    #         output_dir="./output",
+    #         parse_method="txt"
+    #     )
+    #     print(f"Finished {file_path}")
+
+    # Process multiple documents
+    # await rag.process_folder_complete(
+    #     folder_path="./data",
+    #     output_dir="./output",
+    #     file_extensions=[".pdf", ".docx", ".pptx"],
+    #     recursive=True,
+    #     max_workers=4
+    # )
+
     # Query the processed content
     # Pure text query - for basic knowledge base search
     text_result = await rag.aquery(
-        # "What are the main findings shown in the figures and tables?",
-        # "What do you know about Weaviate?",
-        # "Give me the summary of the document I provided",
-        # "What is the Total revenues of Q3-2023 of Tesla",
-        # "Explain 'SCost of goods sold per vehicle' chart using numbers",
-
         query=query,
-        mode="hybrid"
+        mode="hybrid",
+        enable_rerank=False
     )
-    # print("Text query result:", text_result)
+     
     return text_result
 
     # Multimodal query with specific multimodal content
@@ -167,6 +190,7 @@ async def main(query:str, file_path:str):
 #     mode="hybrid"
 # )
 #     print("Multimodal query result:", multimodal_result)
+
 
 if __name__ == "__main__":
     asyncio.run(main())

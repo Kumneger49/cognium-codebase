@@ -1,0 +1,46 @@
+{
+  "doc-926ce99ed046a0a4369fdb5b7ac29763": {
+    "status": "processed",
+    "chunks_count": 27,
+    "chunks_list": [
+      "chunk-2a8c6be1f46bc2449ccbaa6c2d0f71cb",
+      "chunk-84cb9e9039f95b4aed08c09f5f20940f",
+      "chunk-7a49dd70893a16d10b27768c7cebb62b",
+      "chunk-2d987f12520966ccff6e6cadd8e41b23",
+      "chunk-b142ac189fc79bd2727fc84d7e586a7d",
+      "chunk-d7cc49537c6b62616bcdfac08476e7bb",
+      "chunk-dd422a0112c7e5a454c50785eb8e000c",
+      "chunk-4ae2ca63b7e9760a262466a554c2dea9",
+      "chunk-6885b494b87e55106e960d671db6185e",
+      "chunk-454118aa904c26e81e140665a24f5ca8",
+      "chunk-c5cb5ff8dfad599fd012411ebbee3723",
+      "chunk-123e74ebd7532e432d58853f50510292",
+      "chunk-4d0ce5bc825b17fb6482691e2548bf9c",
+      "chunk-1de0bfcade46246ff878192b18e55cb1",
+      "chunk-3e7f9faad90e73461b16e9b3d2d8e9e0",
+      "chunk-34545371eea25be53667f40eb5b7e29d",
+      "chunk-c8ca48e94be6ca1ca342c78c836bbbb5",
+      "chunk-d30ec1f6b0812d52bba99b2df8717b1c",
+      "chunk-aa45bde5797d77bdb5bb7cc3fd02059a",
+      "chunk-bc26d8edc92ba96a42843f1c0af0a56a",
+      "chunk-e60adffb376e70a9c68fb753f81489f9",
+      "chunk-cdb06a024c6dfd5a2761e1c66e55131d",
+      "chunk-747e5319aad74979b7227b7372ae095a",
+      "chunk-1deb64ad75827b973d21e1914a70f164",
+      "chunk-5cb77dd20d3d5a36aee8475e8b3c48b5",
+      "chunk-db15f7e4e2a8de38c88ffca8d58c6b7f",
+      "chunk-ff1501508cf94606992bf0ad9c03b7d5"
+    ],
+    "content_summary": "Q3 2023 Update \n\nHighlights 03   \nFinancial Summary 04   \nOperational Summary 06   \nVehicle Capacity 07   \nCore Technology 08   \nOther Highlights 09   \nOutlook 10   \nPhotos & Charts 11   \nKey Metrics 16   \nFinancial Statements 19   \nAdditional Inform...",
+    "content_length": 14915,
+    "created_at": "2025-09-02T09:47:59.313160+00:00",
+    "updated_at": "2025-09-02T13:55:25+00:00",
+    "file_path": "TSLA-Q3-2023-Update-3.pdf",
+    "track_id": "insert_20250902_134759_1ce01f83",
+    "metadata": {
+      "processing_start_time": 1756806479,
+      "processing_end_time": 1756806539
+    },
+    "multimodal_processed": true
+  }
+}

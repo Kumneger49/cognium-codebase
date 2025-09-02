@@ -63,7 +63,7 @@ python main.py
 ## Configuration notes
 - Models:
   - Text LLM: `gpt-4o-mini`
-  - VLM: `gpt-4o` (for multimodal/image cases)
+  - VLM: `gpt-4o-mini` (for multimodal/image cases)
   - Embeddings: `text-embedding-3-large`
 - Parser: `mineru` by default; parse methods include `auto`, `ocr`, or `txt`
 - Working/output dirs can be changed in the Streamlit sidebar
@@ -91,7 +91,7 @@ python -m pip install --upgrade --force-reinstall numpy pandas
 ## Roadmap / Next Steps
 
 ### 1) Incremental ingestion: keep updating the KG without disruption
-- Reuse the same `working_dir` across ingestions. Call `process_document_complete` for each new file; artifacts accumulate in `rag_storage`.
+<!-- - Reuse the same `working_dir` across ingestions. Call `process_document_complete` for each new file; artifacts accumulate in `rag_storage`.
 - Deduplicate chunks by stable content hash or document-id + page-range to avoid duplication on re-ingest.
 - Keep per-document outputs under `./output/<doc-name>/...` for provenance.
 - Example ingestion loop (pseudo-code):
@@ -104,32 +104,31 @@ for path in files:
         parse_method="auto",  # or txt/ocr
     )
 ```
-- Consider an "append mode" that records document metadata (doc_id, source, timestamp) so the retriever can filter/scope queries by document or time.
+- Consider an "append mode" that records document metadata (doc_id, source, timestamp) so the retriever can filter/scope queries by document or time. -->
 
 ### 2) Conversation memory
-- Short-term memory (UI level): keep `st.session_state["chat_history"]` as a list of messages and prepend/include it when calling the LLM. Keep the vector-retrieval step focused on the user’s latest question but provide memory to the generator.
+<!-- - Short-term memory (UI level): keep `st.session_state["chat_history"]` as a list of messages and prepend/include it when calling the LLM. Keep the vector-retrieval step focused on the user’s latest question but provide memory to the generator.
 - Long-term memory (RAG level): index summarized conversation turns into the same vector store under a dedicated collection/namespace (e.g., `conversations/`), and retrieve them alongside document chunks.
-- Hybrid approach: summarize older turns into compact notes stored as retrievable context; keep last N raw turns for recency.
+- Hybrid approach: summarize older turns into compact notes stored as retrievable context; keep last N raw turns for recency. -->
 
 ### 3) Resilience and edge cases
-- Retries with backoff for API calls; circuit-breaker on repeated failures.
+<!-- - Retries with backoff for API calls; circuit-breaker on repeated failures.
 - Explicit checks: API key presence, file type/size, writable paths.
 - Parse fallbacks: try `txt → auto → ocr` in order; surface detailed errors in the UI.
 - Idempotency: safe to re-run ingestion for the same file (guard by doc hash/digest).
-- Observability: structured logs; capture exceptions with user-friendly messages; optionally write an error report to `./output/errors/<timestamp>.log`.
+- Observability: structured logs; capture exceptions with user-friendly messages; optionally write an error report to `./output/errors/<timestamp>.log`. -->
 
 ### 4) Demo agent with web search and weather
-- Add two tools:
+<!-- - Add two tools:
   - Web search (e.g., Google Custom Search or SerpAPI) → returns top results (title, snippet, url)
   - Weather (e.g., Open-Meteo or OpenWeather) → current conditions by city/lat-lon
 - Agent loop options:
   - Simple rules: if the user asks about "weather" or "search", call the tool and blend results with RAG context.
   - LLM tool-calling: expose JSON function specs for `web_search(query)` and `weather(city_or_coords)` and let the LLM decide.
-- Streamlit integration: a second tab with an agent chat UI showing tool calls and results alongside RAG citations.
+- Streamlit integration: a second tab with an agent chat UI showing tool calls and results alongside RAG citations. -->
 
 ---
 
-## License
-This repository is for demonstration purposes. Add your preferred license if needed.
+
 
 
